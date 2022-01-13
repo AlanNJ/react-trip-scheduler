@@ -37,7 +37,9 @@ export const planJourney = (props) => {
 			});
 			toast.success("Destination Added");
 			setTimeout(() => {
-				router.push("/");
+				if (start && end) {
+					router.push("/");
+				}
 			}, [1000]);
 		}
 	};
