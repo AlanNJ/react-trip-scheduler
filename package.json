@@ -1,0 +1,41 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "serve-json": "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/material": "^5.2.4",
+    "@mui/styles": "^5.2.3",
+    "antd": "^4.17.4",
+    "axios": "^0.24.0",
+    "connect": "^3.7.0",
+    "json-server": "^0.17.0",
+    "material-ui": "^1.0.0-beta.47",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
+    "react-toastify": "^8.1.0",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "toastify": "^2.0.1"
+  }
+}

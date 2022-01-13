@@ -1,0 +1,28 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "email": "typicode",
+      "password": "typicode",
+      "phone": "typicode",
+      "destination": []
+    },
+    {
+      "name": "q",
+      "email": "q",
+      "password": "q",
+      "phone": "q",
+      "id": 2,
+      "destinations": [
+        {
+          "start": "fsfsfsf",
+          "end": "sfsfsf",
+          "id": "2",
+          "date": "2021-12-21"
+        }
+      ]
+    }
+    
+  ]
+}
