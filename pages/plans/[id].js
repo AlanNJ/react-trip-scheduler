@@ -18,9 +18,9 @@ export const planJourney = (props) => {
 		var today = new Date(),
 			date =
 				today.getFullYear() +
-				"-" +
+				"/" +
 				(today.getMonth() + 1) +
-				"-" +
+				"/" +
 				today.getDate();
 		if (start === undefined || end === undefined) {
 			toast.error("Please select both destinations");
@@ -38,7 +38,7 @@ export const planJourney = (props) => {
 			toast.success("Destination Added");
 			setTimeout(() => {
 				router.push("/");
-			}, [2000]);
+			}, [1000]);
 		}
 	};
 	return (
