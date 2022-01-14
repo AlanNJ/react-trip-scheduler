@@ -8,10 +8,10 @@ import { toast } from "react-toastify";
 export const planJourney = (props) => {
 	const [start, setStart] = useState();
 	const [end, setEnd] = useState();
+	const [loading, setLoading] = useState(false);
 	const router = useRouter();
 	useEffect(() => {
 		props.getInitial();
-		console.log(props.user);
 	}, []);
 	const setJourney = async (e) => {
 		const id = router.query.id;
@@ -25,6 +25,7 @@ export const planJourney = (props) => {
 		if (start === undefined || end === undefined) {
 			toast.error("Please select both destinations");
 		} else {
+			setLoading(true);
 			const data = await axios.patch(`http://localhost:3000/Users/${id}`, {
 				destinations: [
 					{
@@ -35,6 +36,7 @@ export const planJourney = (props) => {
 					},
 				],
 			});
+			setLoading(false);
 			toast.success("Destination Added");
 			setTimeout(() => {
 				if (start && end) {

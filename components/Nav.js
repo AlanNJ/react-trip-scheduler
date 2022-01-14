@@ -18,7 +18,7 @@ const Nav = (props) => {
 		window.localStorage.removeItem("User");
 	};
 	const router = useRouter();
-	if (props.user.user) {
+	if (props.user && props.user.user && props.user.user.id) {
 		const id = props.user.user.id;
 	}
 

@@ -29,26 +29,29 @@ const SET_USER = "SET_USER";
 /* harmony export */   "ni": () => (/* binding */ logOut)
 /* harmony export */ });
 /* unused harmony exports getInitialData, logoutUser */
-/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5099);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5099);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2167);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1187);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 const getInitialData = (data)=>{
     return {
-        type: _action_types__WEBPACK_IMPORTED_MODULE_1__/* .INITIAL_DATA */ .iW,
+        type: _action_types__WEBPACK_IMPORTED_MODULE_2__/* .INITIAL_DATA */ .iW,
         payload: data
     };
 };
 const setUser = (data)=>{
     return {
-        type: _action_types__WEBPACK_IMPORTED_MODULE_1__/* .SET_USER */ .QE,
+        type: _action_types__WEBPACK_IMPORTED_MODULE_2__/* .SET_USER */ .QE,
         payload: data
     };
 };
 const logoutUser = ()=>{
     return {
-        type: _action_types__WEBPACK_IMPORTED_MODULE_1__/* .LOGOUT_USER */ .Wb,
+        type: _action_types__WEBPACK_IMPORTED_MODULE_2__/* .LOGOUT_USER */ .Wb,
         payload: null
     };
 };
@@ -59,9 +62,10 @@ const loginUser = (data)=>{
                 if (data.email === element.email && data.password === element.password) {
                     console.log(element);
                     dispatch(setUser(element));
+                    react_toastify__WEBPACK_IMPORTED_MODULE_1__.toast.success("login successful");
                     window.localStorage.setItem("User", JSON.stringify(element));
                 } else {
-                    console.log("no users found");
+                    react_toastify__WEBPACK_IMPORTED_MODULE_1__.toast.error("no users found");
                 }
             });
         });

@@ -181,7 +181,7 @@ const Nav = (props)=>{
         window.localStorage.removeItem("User");
     };
     const router = (0,router_.useRouter)();
-    if (props.user.user) {
+    if (props.user && props.user.user && props.user.user.id) {
         const id = props.user.user.id;
     }
     return(/*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
