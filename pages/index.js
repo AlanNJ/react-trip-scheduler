@@ -27,6 +27,7 @@ export const index = (props) => {
 		<div>
 			<h1 className="dash-h1">Add your New Destination</h1>
 			<AiOutlinePlusCircle className="plus-icon" onClick={changeRoute} />
+			<div className="span">ggggg</div>
 		</div>
 	);
 };

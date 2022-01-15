@@ -35,6 +35,12 @@
 	background: #0055c1;
 	color: white;
 }
+.box {
+	display: flex;
+	margin: auto;
+	flex-wrap: wrap;
+	flex-wrap: 2;
+}
 .nav-container a {
 	color: white;
 	text-align: center;
@@ -202,4 +208,11 @@ input[type="text"]::placeholder {
 	.sidenav a {
 		font-size: 18px;
 	}
+}
+.span {
+	border: 1px solid red;
+	height: 200px;
+	display: flex;
+
+	justify-content: center;
 }
